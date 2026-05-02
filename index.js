@@ -4,24 +4,24 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O",
 "/"
 ];
 
-let firstEl = document.getElementById("firstOption-el").value
-let secondEl = document.getElementById("secondOption-el").value
+let firstEl = document.getElementById("firstOption-el")
+let secondEl = document.getElementById("secondOption-el")
 
-let passwordOptionOne = []
-let passwordOptionTwo = []
+let passwordCharacter = ""
 
 function randomPassword() {
-    activatePasswordGenerator = true
-    for (let i = 0; i < 15; i++) {
-        
-        let passwordCharacter = Math.floor(Math.random() * characters.length)
-        
-        // password option one
-        passwordOptionOne += characters[passwordCharacter] 
-        document.getElementById("firstOption-el").value = passwordOptionOne
+    let finalPassword1 = generateRandomPassword()
+    firstEl.value = finalPassword1
 
-        // password option two
-        passwordOptionTwo += characters[passwordCharacter]
-        document.getElementById("secondOption-el").value = passwordOptionTwo
+    let finalPassword2 = generateRandomPassword()
+    secondEl.value = finalPassword2
+}
+
+function generateRandomPassword() {
+    let passwordOption = []
+    for (let i = 0; i < 15; i++) {
+        passwordCharacter = Math.floor(Math.random() * characters.length)
+        passwordOption += characters[passwordCharacter]
     }
+    return passwordOption
 }
