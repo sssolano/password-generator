@@ -1,3 +1,52 @@
 body {
     margin: 0;
+    background-color: #1F2937;
+    font-family: "Karla", sans-serif;
+}
+
+.main-div {
+    display: block;
+    width: 280px;
+    margin: 100px 100px;
+}
+
+.text {
+    color: lightgray;
+    width: 300px;
+    margin-bottom: 50px;
+}
+
+h1 {
+    color: white;
+    margin-bottom: -5px;
+}
+
+#green-text {
+    color: #4ADF86;
+}
+
+#generate-btn {
+    background-color: #4ADF86;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 12px 22px;
+}
+
+.divider {
+    height: 2px;
+    background-color: #2F3E53;
+    margin: 50px 0;
+    width: 400px
+}
+
+.passwords-div {
+    display: flex;
+}
+
+.password-field {
+    background-color: #273549;
+    border-radius: 4px;
+    width: 150px;
+    height: 30px;
 }
